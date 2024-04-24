@@ -21,3 +21,5 @@ if __name__ == '__main__':
 
 
 #data folder 끌어올 때 선택 메뉴에서  -->  add to workspace..(x) <-> copy folder(o)
+#add to workspace : 해당 디렉토리의 경로만 조회하기 때문에 폴더가 삭제되면 경로가 무용지물이 됨
+#copy folder : 해당 디렉토리를 복사해서 workspace에 적재하기 때문에 원본 폴더 삭제유무 상관 없음

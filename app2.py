@@ -7,17 +7,21 @@ import streamlit as st
 
 def main():
     #텍스트 표시 방법
+    #title : 제목(큰 사이즈)
     st.title('Web Dashboard')
     
+    #text : 내용(일반 가독 사이즈)
     st.text('Let\'s study about \"astreamlit\" programming framework')
 
     name = 'Fletcher Seth'
     st.text(f"My name is {name}. I'm your guidence for journy to wonderful streamlit world")
 
+    #header : title보다 조금 작은 제목
+    #subheader : header의 부제목
     st.header('This section is \'header\' \: smallest than title')
     st.subheader('Learning Basic-Grammar for ')
     
-    #이 함수들은 글자 배경에 특정 color가 적용됨 : 알림용이기 때문
+    #이 함수들은 글자 배경에 특정 color가 적용되어 표시됨 : 알림용이기 때문(인지성↑)
     st.success('작업이 성공 했을 때 사용')   #green
     st.warning('경고 문구를 보여주고 싶을 때 사용')   #yellow
     st.info('정보를 보여주고 싶을 때 사용')   #blue

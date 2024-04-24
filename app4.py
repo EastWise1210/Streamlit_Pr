@@ -7,7 +7,7 @@ import pandas as pd
 def main():
     df = pd.read_csv('./data/iris.csv')
     
-    #버튼 만들기  -->  버튼 누르면 데이터프레임 보여주는 기능 추가
+    #<버튼 만들기>  -->  버튼 누르면 데이터프레임 보여주는 기능 추가
     if st.button(label='Show DataFrame'):
         st.dataframe(df)
 
@@ -26,7 +26,7 @@ def main():
         st.text('Click to this')
     
 
-    #라디오 버튼 : (나열형) 여러개 중에 단일 선택
+    #<라디오 버튼> : (나열형) 여러개 중에 단일 선택
     #my_order = ['오름차순 정렬', '내림차순 정렬', '선택 없음']
     #st.radio(label='SELECT', options=my_order)
 
@@ -42,7 +42,7 @@ def main():
         st.dataframe(df)
 
 
-    #체크박스 : 둘 중 하나만 선택(체크 / 해제)
+    #<체크박스> : 둘 중 하나만 선택(체크 / 해제)
     #ex)체크하면 헤드 5개 보여주고, 해제하면 안 보여주기
     check = st.checkbox(label='SHOW HEAD(5)')  #bool=True 설정해놓으면 기본적으로 자동 체크되어 있음
     if check == True:
@@ -51,7 +51,7 @@ def main():
         pass
 
     
-    #셀렉트 박스 : (목록형) 여러개 중 단일 선택  -->  ex)선택 항목에 따라 메세지 표시하기
+    #<셀렉트 박스> : (목록형) 여러개 중 단일 선택  -->  ex)선택 항목에 따라 메세지 표시하기
     my_select_list = ['Python', 'Java', 'C', 'C++', 'C#', 'Go', 'PHP', 'JavaScript', 'Kotlin']
     sel_box = st.selectbox(label='Choose Your Favorite Programming Language', options=my_select_list)
     if sel_box == my_select_list[0]:
@@ -74,7 +74,7 @@ def main():
         st.text('Your Choice is ' + my_select_list[8] + ' I like too!')
 
 
-    #멀티 셀렉트 : 여러개 중 다중 선택
+    #<멀티 셀렉트> : 여러개 중 다중 선택
     my_choice_list = st.multiselect(label='Choose Your All Favorite Thing', options=df.columns)
     if my_choice_list == []: #이하와 상등 len(my_choice_list) == 0
         pass
@@ -84,7 +84,7 @@ def main():
     #if문 코드 구성할 때 : 1.프론트엔드->정상 case부터 설정  /  2.백엔드->비정상 case부터 설정
 
 
-    #슬라이더 : 주로 숫자 조정할 때 사용된다
+    #<슬라이더> : 주로 숫자 조정할 때 사용된다
     #st.slider(label='Data', min_value=-5.0, max_value=10.5, value=0.0, step=0.5)   #min_value:최솟값  max_value:최댓값  value:초깃값  step:오프셋 크기
     #ex) 1세부터 120세까지 범위 중 사용자 선택 슬라이더 만들기
     age = st.slider(label='Age', min_value=1, max_value=120, value=1, step=1)  #변수에 할당해서 print() 찍어보면 해당 값이 들어오는걸 알 수 있음
@@ -92,7 +92,7 @@ def main():
     st.info(f'선택한 나이는 {age}세입니다.')
 
 
-    #익스펜더 : 선택하면 보이고 안 선택하면 감추기
+    #<익스펜더> : 선택하면 보이고 안 선택하면 감추기
     with st.expander('show'):
         st.text('this is a simple sentence for testing')
         st.dataframe(df)

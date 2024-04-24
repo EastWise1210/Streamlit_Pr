@@ -4,7 +4,7 @@ import streamlit as st
 
 def main():
     #1. 이름 입력받기
-    name = st.text_input('input your text')  #문자열로 받는다
+    name = st.text_input('input your text')  #입력 받은 값의 타입은 문자열(str)
     if name == '':
         pass
     else :
@@ -36,9 +36,9 @@ def main():
 
     #6. 날짜 입력받기
     my_date = st.date_input(label='Choose Date')
-    st.text(my_date)  #ISO 포맷으로 출력된다
+    st.text(my_date)  #ISO 날짜 포맷으로 출력된다
     st.text(my_date.weekday())
-    st.text(my_date.strftime('%A'))
+    st.text(my_date.strftime('%A'))   #수정하고 싶으면 ISO 날짜 포맷에 부합한 코드 입력
 
 
     #7. 시간 입력받기
